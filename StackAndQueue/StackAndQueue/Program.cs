@@ -15,6 +15,7 @@ namespace StackAndQueue
                 Console.WriteLine("1-Push data in stack");
                 Console.WriteLine("2- Peek and Pop of stack");
                 Console.WriteLine("3-Enque data in Queue");
+                Console.WriteLine("4-Deque element in Queue");
                 Console.WriteLine("Choose above option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 StackDemo stackDemo = new StackDemo();
@@ -27,7 +28,7 @@ namespace StackAndQueue
                         stackDemo.Push(56);
                         stackDemo.Display();
                         break;
-                        case 2:
+                    case 2:
                         stackDemo.Push(70);
                         stackDemo.Push(30);
                         stackDemo.Push(56);
@@ -43,9 +44,18 @@ namespace StackAndQueue
                         queueDemo.Enque(56);
                         queueDemo.Enque(30);
                         queueDemo.Enque(70);
-                        //queueDemo.Display();
                         break;
+                    case 4:
+                        queueDemo.Enque(56);
+                        queueDemo.Enque(30);
+                        queueDemo.Enque(70);
+                        stackDemo.Display();
+                        Console.WriteLine("#############");
+                        queueDemo.Deque();
+                        Console.WriteLine("#############");
+                        stackDemo.Display();
 
+                        break;
                     default:
                         Console.WriteLine("Invalide option");
                         break;

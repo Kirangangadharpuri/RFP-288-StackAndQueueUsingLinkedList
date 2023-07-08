@@ -28,10 +28,32 @@ namespace StackAndQueue
             }
             Console.WriteLine(node.data);
         }
+        //public void Deque()
+        //{
+        //    if(head==null)
+        //    {
+        //        Console.WriteLine("Queue is empty");
+        //    }
+        //    else
+        //    {
+        //        while(head!=null)
+        //        {
+        //            Console.WriteLine("{0}Top element is deleted successfully",head.data);
+        //            head = head.next;
+
+        //        }
+                
+        //    }
+        //}
         public void Display()
         {
             Node temp = head;
-            while (temp != null)
+            if(temp == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            while(temp != null)
             {
                 Console.WriteLine(temp.data);
                 temp = temp.next;
