@@ -19,15 +19,35 @@ namespace StackAndQueue
             Node node = new Node(data);
             if(top == null)
             {
-                node.next=null;
+                node.next=null;    //making address of next node nuul in first node
             }
             else
             {
-                node.next = top;
+                node.next = top;    //push top node to next node and top will having nw data
             }
             top = node;
             Console.WriteLine("Elements in stack : "+data);
            
+        }
+        public void Peek()
+        {
+            if(top==null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Top value is : "+top.data);
+        }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Top value is : " + top.data);
+            top = top.next;
+            Console.WriteLine("Top value has been deleted successfully.");
         }
         public void Display()
         {

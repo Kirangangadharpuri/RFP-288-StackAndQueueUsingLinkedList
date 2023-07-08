@@ -13,15 +13,29 @@ namespace StackAndQueue
             while (true)
             {
                 Console.WriteLine("1-Push data in stack");
+                Console.WriteLine("2- Peek and Pop of stack");
                 Console.WriteLine("Choose above option");
                 int option = Convert.ToInt32(Console.ReadLine());
-                switch(option)
+                StackDemo stackDemo = new StackDemo();
+
+                switch (option)
                 {
                     case 1:
-                        StackDemo stackDemo = new StackDemo();
                         stackDemo.Push(70);
                         stackDemo.Push(30);
                         stackDemo.Push(56);
+                        stackDemo.Display();
+                        break;
+                        case 2:
+                        stackDemo.Push(70);
+                        stackDemo.Push(30);
+                        stackDemo.Push(56);
+                        stackDemo.Display();
+                        Console.WriteLine("#############");
+                        stackDemo.Peek();
+                        Console.WriteLine("#############");
+                        stackDemo.Pop();
+                        Console.WriteLine("#############");
                         stackDemo.Display();
                         break;
                     default:
